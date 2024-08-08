@@ -3,33 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Hogar - Amor de Galgo 🐾</title>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="../img/logo.jpg" alt="logo hogar amor de galgo">
-        </div>
-        <h1>Hogar-Amor de Galgo </h1>
-        <H4>No compres uno de RAZA, mejor adopta uno sin CASA</H4>
-         <nav>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="logo">
+                <img class="logo" src="../img/logo.jpg" alt="logo">
+            </a>
+             <h1>Hogar-Amor de Galgo </h1>
+            <h1 class="h1"></h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul>
-                <li><a href="../index.html">Inicio</a>
+                <li>
+                    <a href="../index.html">inicio</a>
                 </li>
-                <li><a href="quienessomos.html">Quienes somos</a>
+                <li>
+                    <a href="quienessomos.html">Quienes Somos</a>
+                </li>    
+                
+                <li>
+                    <a href="dondeestamos.html">Donde Estamos</a>
                 </li>
-                <li><a href="adopcionesresponsables.html">Adopciones responsables</a>
+                <li>
+                    <a href="adopcionesresponsables.html">Adopciones Responsables</a>
                 </li>
-                <li><a href="dondeestamos.html">Donde estamos</a>
-                </li>
-                <li><a href="productos.html">Productos</a>
-                </li>
-                <li><a href="donaciones.html">Donaciones</a>
-                </li>
-            </ul> 
-        </nav>
-    </header>
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li> 
+                <li>
+                    <a href="donaciones.html">Donaciones</a>
+                </li> 
+            </ul>
+        </div>
+    </nav>
+</header>
     <main>
         <DIV>
             <Section>
@@ -75,63 +89,74 @@
         <section>
             <p class="textoform">¿Quieres adoptar? Cuentanos acerca de usted/es
             </p>
+
+            <form class="row g-3">
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="validationDefault01" value="Marcos" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault02" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="validationDefault02" value="Ramos" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefaultUsername" class="form-label">Mail</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                    <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationDefault03" class="form-label">Cuidad</label>
+                  <input type="text" class="form-control" id="validationDefault03" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault04" class="form-label">Hogar</label>
+                  <select class="form-select" id="validationDefault04" required>
+                    <option selected disabled value="">Elegir</option>
+                    <option>Departamento</option>
+                    <option>Casa</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault05" class="form-label">Numero de Integrantes</label>
+                  <input type="text" class="form-control" id="validationDefault05" required>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      Acepto terminos y condiciones
+                    </label>
+                  </div>
+                </div>
+                <div class="col-13">
+                  <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                </div>
+              </form>
            
-            <form action="form.php" method="POST">
-                <div>
-                    <label for="Nombre y apellido">Nombre y apellido</label>
-                    <input type="text" name="Nombre" id="nombre" placeholder="Martin Gomez">
-                </div>
-                <br>
-                    <div><label for="Edad">Edad</label>
-                        <input type="text" name="edad" id="edad" placeholder="35">
-                </div>
-                <br>
-                <div>
-                        <label for="Numero de integrantes">Numero de integrantes</label>
-                        <input type="number" name="integrantes" id="numero">
-                 </div>
-                 <br>
-                 <div>
-                    <label for="">Lugar</label>
-                    <select name="Hogar" id="Lugar">
-                        <option value=""></option>
-                        <option value="">Depatamento</option>
-                        <option value="">Casa</option> 
-                    </select>
-                 </div>
-                 <br>
-                 <div>
-                    <label for="">Hay gente en el hogar</label>
-                    <select name="Siempre hay gente en el hogar" id="">
-                        <option value="si"></option>
-                        <option value="si">Siempre</option>
-                        <option value="no">Casi siempre</option>
-                        <option value="no">Casi nunca</option>
-                        <option value="no">Nunca</option>
-                    </select>
-                 </div>
-                 <br>
-                 <input type="submit" value="Enviar">
-             </section>
-            <Section>
                 <p class="textoform">¿Ya adoptaste con nosotros? Dejanos una pequeña reseña  
                 </p>
-                <form action="form.php" method="POST">
+                <form class="form" action="form.php" method="POST">
                     <div>
                         <label for="coment">Escribe tu comentario</label> <br>
                         <textarea name="Comentarios" id="Comentarios" cols="100" rows="10">
                     </textarea></div>
                 </form>
-                <input type="submit" value="Enviar">
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                  </div> 
             </Section></form>
             
     </main>
     <hr>
     <footer>
-        <h4>📞 Telefono: +54 911 2466 5484</h4>
-        <h4>📷 Instagram: <a href="https://www.instagram.com/hogaramordegalgo/"> Hogaramordegalgo
-        </a></h4>
-        <h4>✉️ Mail: hogaramordegalgo@gmail.com </h4>
+        <p class="footer-text">
+            <h6>📞 Telefono: +54 911 2615 4888</h6>
+            <h6>📷 Instagram: <a href="https://www.instagram.com/hogaramordegalgo/"> Hogaramordegalgo
+            </a></h6>
+            <h6>✉️ Mail: hogaramordegalgo@gmail.com </h6></p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
